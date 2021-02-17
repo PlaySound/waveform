@@ -20,7 +20,7 @@ type WaveJSON struct {
 
 // MP3ToJSON ...
 func MP3ToJSON(filepath string) (duration uint32, waveformURL string, err error) {
-	ossHost := os.Getenv("OSS_HOST")
+	ossHost := os.Getenv("OSS_ENDPOINT_INTERNAL")
 	ossID := os.Getenv("OSS_ID")
 	ossSecret := os.Getenv("OSS_SECRET")
 	bucketName := os.Getenv("OSS_BUCKET")
