@@ -14,7 +14,7 @@ func main() {
 	grpcServer := grpc.NewServer()
 	pb.RegisterWaveformServiceServer(grpcServer, waveformServer)
 
-	listener, err := net.Listen("tcp", "0.0.0.0:95270")
+	listener, err := net.Listen("tcp", "0.0.0.0:1980")
 	if err != nil {
 		log.Fatal("cannot start server: ", err)
 	}

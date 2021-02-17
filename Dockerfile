@@ -19,5 +19,5 @@ FROM yunfei1982/ub-waveform
 WORKDIR /app
 COPY --from=builder /build/main ./waveformServer
 
-# EXPOSE 9527
+# EXPOSE 1980
 ENTRYPOINT ["/app/waveformServer"]
