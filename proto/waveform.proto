@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = ".;pb";
+
+message TrackInput { string path = 1; }
+
+message TrackOutput {
+  uint32 duration = 1;
+  string waveformURL = 2;
+}
+
+service WaveformService {
+  rpc Waveform(TrackInput) returns (TrackOutput) {}
+}
